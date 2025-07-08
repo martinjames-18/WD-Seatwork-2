@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Beth+Ellen&family=Montserrat:ital,wght@0,900;1,900&family=Notable&family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat";
+  color: white;
+}
+
+:root {
+  --bg-color: #0c0c29;
+  --btn-color: #d15d2d;
+  --btnHover-color: #e67e22;
+  --red-color: #e83539;
+  --red-hover-color: #ff4d4d;
+}
+
+body {
+  background-color: var(--bg-color);
+  overflow-x: hidden;
+}
+
+video {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  height: 100svh;
+  width: 100svw;
+}
+
+.hero-section {
+  position: relative;
+  background-image: url("../img/finalBg.png");
+  background-size: cover;
+  height: 100svh;
+  padding: 1rem 2rem;
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    outline: 1px solid white;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    #active {
+      background-color: var(--btn-color);
+    }
+    .navlinks {
+      padding: 0.4rem 0.8rem;
+      background-color: black;
+      border-radius: 10px;
+      &:hover {
+        background-color: var(--btnHover-color);
+      }
+    }
+    a {
+      text-decoration: none;
+      color: white;
+    }
+    .leftSide {
+      display: flex;
+      gap: 2rem;
+    }
+  }
+  .content {
+    height: 88svh;
+    width: 50svw;
+    .text {
+      padding-top: 10rem;
+      .upper p {
+        font-size: 3rem;
+      }
+      .upper h6 {
+        font-size: 2rem;
+      }
+      .upper {
+        margin-bottom: 13rem;
+      }
+      .lower {
+        #up {
+          display: flex;
+          gap: 0.4rem;
+          p {
+            color: rgb(99, 99, 99);
+          }
+          p,
+          span {
+            font-size: 1.5rem;
+          }
+        }
+        #low {
+          padding: 0.4rem 1.2rem;
+          background-color: rgb(99, 99, 99);
+          width: fit-content;
+          margin-top: 1rem;
+          border-radius: 20px;
+          &:hover {
+            background-color: var(--btnHover-color);
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
+.content1 {
+  height: 100svh;
+}
