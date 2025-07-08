@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Beth+Ellen&family=Montserrat:ital,wght@0,900;1,900&family=Notable&family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat";
+}
+
+:root {
+  --bg-color: #0c0c29;
+  --btn-color: #d15d2d;
+  --btnHover-color: #e67e22;
+  --red-color: #e83539;
+  --red-hover-color: #ff4d4d;
+}
+
+body {
+  background-color: var(--bg-color);
+  overflow-x: hidden;
+}
+
+.hero-section {
+  background-image: url("../img/bgHero3.png");
+  background-size: cover;
+  height: 100svh;
+  padding: 1rem 2rem;
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    outline: 1px solid white;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    #active {
+      background-color: var(--btn-color);
+    }
+    .navlinks {
+      padding: 0.4rem 0.8rem;
+      background-color: black;
+      border-radius: 10px;
+      &:hover {
+        background-color: var(--btnHover-color);
+      }
+    }
+    a {
+      text-decoration: none;
+      color: white;
+    }
+    .leftSide {
+      display: flex;
+      gap: 2rem;
+    }
+  }
+  .content-section {
+    width: 60svw;
+    height: 88svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    .title {
+      h1 {
+        font-family: "Anton", sans-serif;
+        font-size: 6rem;
+        font-weight: 400;
+        line-height: 1;
+        width: 70%;
+        color: white;
+      }
+    }
+    .buy {
+      padding: 0.4rem 1.2rem;
+      width: fit-content;
+      background-color: rgb(51, 207, 255);
+      border-radius: 10px;
+      color: white;
+    }
+    .where {
+      display: flex;
+      gap: 0.9rem;
+      background-color: white;
+      width: fit-content;
+      #where1,
+      #where2 {
+        padding: 0.4rem 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        p {
+          color: rgb(126, 126, 126);
+        }
+      }
+      #where1 {
+        border-right: 2px solid rgb(126, 126, 126);
+      }
+      .search {
+        padding: 0.4rem 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        background-color: yellowgreen;
+        color: rgb(255, 255, 255);
+        cursor: pointer;
+        margin: 0.5rem;
+        &:hover {
+          background-color: var(--btnHover-color);
+        }
+      }
+    }
+  }
+}
+
+section.content {
+  height: 100svh;
+}
