@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Beth+Ellen&family=Montserrat:ital,wght@0,900;1,900&family=Notable&family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat";
+  color: white;
+}
+
+:root {
+  --bg-color: #0c0c29;
+  --btn-color: #d15d2d;
+  --btnHover-color: #e67e22;
+  --red-color: #e83539;
+  --red-hover-color: #ff4d4d;
+}
+
+body {
+  background-color: var(--bg-color);
+  overflow-x: hidden;
+}
+
+.hero-section {
+  background-image: url("../img/finalBg.png");
+  background-size: cover;
+  height: 100svh;
+  padding: 1rem 2rem;
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    outline: 1px solid white;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    #active {
+      background-color: var(--btn-color);
+    }
+    .navlinks {
+      padding: 0.4rem 0.8rem;
+      background-color: black;
+      border-radius: 10px;
+      &:hover {
+        background-color: var(--btnHover-color);
+      }
+    }
+    a {
+      text-decoration: none;
+      color: white;
+    }
+    .leftSide {
+      display: flex;
+      gap: 2rem;
+    }
+  }
+
+  /* Body */
+  .hero-content {
+    display: flex;
+    height: 90svh;
+    .leftSide {
+      padding-left: 5rem;
+      width: 45%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 2rem;
+      h1 {
+        font-family: "Anton", sans-serif;
+        font-weight: normal;
+        font-size: 6rem;
+        line-height: 0.95;
+      }
+      p {
+        text-align: justify;
+        width: 70%;
+      }
+      .btn {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        .explore {
+          padding: 0.4rem 1rem;
+          background-color: rgba(255, 255, 255, 0.178);
+          border-radius: 10px;
+          cursor: pointer;
+          &:hover {
+            background-color: var(--btnHover-color);
+          }
+        }
+        .material-symbols-outlined {
+          &:hover {
+            color: var(--btnHover-color);
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    .rightSide {
+      width: 55%;
+      position: relative;
+      .titleRight {
+        margin-top: 16rem;
+        font-family: "'Beth Ellen", sans-serif;
+        font-size: 1.5rem;
+      }
+      .card-container {
+        position: absolute;
+        bottom: 1rem;
+        display: flex;
+        gap: 2rem;
+        img {
+          height: 19rem;
+          border-radius: 20px;
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+      }
+    }
+  }
+}
+
+section.content {
+  height: 100svh;
+}
